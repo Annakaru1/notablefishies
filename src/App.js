@@ -21,10 +21,14 @@ toggleNote = () => {
   });
 }
 
- getNotes = () => {
-   axios.get(urlFor('notes'))
-   .then((res) => this.setState({ notes: res.data }) )
-   .catch((err) => console.log(err.response.data) );
+getNotes = () => {
+  axios.get(urlFor('notes'))
+  .then((res) => this.setState({ notes: res.data }) )
+  .catch((err) => console.log(err.response.data) );
+  }
+
+getNote = () => {
+  console.log('Clicked!');
   }
 
 render() {
@@ -40,9 +44,10 @@ render() {
         <List
           getNotes={this.getNotes}
           notes={notes}
+          getNote={this.getNote}
         />
       }
-      
+
     </div>
   );
 }
