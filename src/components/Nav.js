@@ -3,7 +3,7 @@ import React from 'react';
 class Nav extends React.Component {
   render() {
     const { toggleNote } = this.props;
-    
+
     return (
      <div className="nav-container">
         <div className="nav-logo">Note</div>
@@ -11,8 +11,8 @@ class Nav extends React.Component {
           { showNote ? 'Cancel' : '+ Note' }
         </div>
       </div>
-   );
- }
+    );
+  }
 }
 
 export default Nav;
